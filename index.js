@@ -82,14 +82,14 @@ app.post("/persons", (request, response) => {
   response.json(person);
 });
 
-const PORT = 3001;
-app.listen(PORT, () => {
-  console.log(`server is running on port ${PORT}`);
-});
-
 app.get("/info", (request, response) => {
   const amount = persons.length;
   const time = new Date();
   response.send(`Phonebook has info for ${amount} persons 
 ${time}`);
+});
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
