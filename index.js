@@ -9,6 +9,8 @@ app.use(morgan("tiny"));
 
 app.use(cors());
 
+app.use(express.static("build"));
+
 const persons = [
   {
     name: "Ada Lovelace",
