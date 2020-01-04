@@ -81,7 +81,6 @@ app.post("/persons", (request, response) => {
     id: generateId()
   };
   persons = persons.concat(person);
-  console.log(person);
   response.json(person);
 });
 
