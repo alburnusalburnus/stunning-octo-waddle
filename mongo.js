@@ -1,8 +1,16 @@
 const mongoose = require("mongoose");
 
 const personSchema = new mongoose.Schema({
-  name: String,
-  number: String
+  name: {
+    type: String,
+    minlenght: 4,
+    required: true
+  },
+  number: {
+    type: String,
+    minlength: 8,
+    required: true
+  }
 });
 
 personSchema.set(
